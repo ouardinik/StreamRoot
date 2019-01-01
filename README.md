@@ -3,6 +3,7 @@ For this exercise I used Python (version 2 .7).  I used the pandas library for t
 
 Two different tools were useful to extract knowledge from the data and identify simple patterns in the data :
 •	The first one is the the seaborn object seaborn.countplot that counts the number of users with respect to one attribute of the dataframe and displays it in histograms. Since each line refers to a unique user that can have a different isp, brower or stream number, this was a very useful tool to visualize the distribution of the users in different conditions.
+
 •	Metrics and percentages.
 
 I - GENRAL ANALYSIS :
