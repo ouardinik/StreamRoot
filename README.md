@@ -3,7 +3,7 @@ For this exercise I used Python (version 2 .7).  I used the pandas library for t
 
 Two different tools were useful to extract knowledge from the data and identify simple patterns in the data :
 
-•	The first one is the the seaborn object seaborn.countplot that counts the number of users with respect to one attribute of the dataframe and displays it in histograms. Since each line refers to a unique user that can have a different isp, brower or stream number, this was a very useful tool to visualize the distribution of the users for different conditions.
+•	The first one is the the seaborn object seaborn.countplot that counts the number of users with respect to one attribute of the dataframe and displays it in histograms. Since each line refers to a unique user that can have a different isp, browser or stream, this was a very useful tool to visualize the distribution of the users for different conditions.
 
 •	Metrics and percentages.
 
@@ -23,7 +23,7 @@ Thanks to these plots we can quickly get some preliminary observations :
 
 II- Further Analysis
 
-In this part, I selected smaller subsets of the data fame and went through a more specific analysis.
+In this part, I selected smaller subsets of the data and went through a more specific analysis.
 
 1-	Streams :
 
@@ -35,7 +35,7 @@ The stream number 7 immediately stands out as all the other streams have high pe
 
 ![Figure1](/figure4.png)
 
-Datch Telecam provides for the majority of the users in stream7 which means that the number of connected users for that isp might be low as well. Indeed, 80% of Datch telecam users are not connected to Streamroot's backend. Even worse, only 0.43% of the users are actually receiving data through p2p. These elements make Datch telecam a very strategic target for streamroot in the hunt for potential clients. 
+Datch Telecam provides for the majority of the users in stream 7 which means that the number of connected users for that isp might be low as well. Indeed, 80% of Datch telecam users are not connected to Streamroot's backend. Even worse, only 0.43% of the users are actually receiving data through p2p. These elements make Datch telecam a very strategic target for streamroot in the hunt for potential partnerships. 
 
 
 2-	Connection to the back end :
@@ -60,15 +60,15 @@ In this last part I selected two subsets of the dataset : the first subset corre
 ![Figure1](/figure7.png)
 
 From the first two figures, we can immediately see that the concentration of users that downloaded more than 100 Mo of data is a lot higher for the users who are using peer to peer on top of the cdn. Less than 10,000 users downloaded more than 100 Mo of data only through CDN.  We can also notice :
-•	That BTP as the highest rate of users (around 17500). After verification, this ISP also has the highest rate of connected users (99.9%)
+•	That BTP has the highest number of users (around 17,500). After verification, this ISP also has the highest rate of connected users (99.9%)
 •	Unsurprisingly, Datch Telecam (which had the lowest rate of connected users), also has the lowest rate of large data downloaded by the users. 
 These 2 observations definitely prove the correlation between the use of peer to peer and the size of the data that a user can download which is also related to the quality of the content since the files are videos.
-•	Olga, another ISP also has a low rate of users according to the first figure. However, 92% of its users are connected to the back-end, and 34% of the users are actually downloading through peer to peer. On the second figure, we can also see Olga also has the lowest rate of users for the users downloading through cdn only. We can hypothetize that the leased lines of Olga do not allow high speed downloads, or the transfer of important sizes of data.
+•	Olga, another ISP also has a low rate of users according to the first figure. However, 92% of its users are connected to the back-end, and 34% of the users are actually downloading through peer to peer. On the second figure, we can also see Olga also has the lowest rate of users for the users downloading through cdn only. We can hypothesize that the leased lines of Olga do not allow high speed downloads, or the transfer of important sizes of data.
 
 For the browsers, we can recognize the same two groups we identified during the general analysis. EarthWolf and Iron were the most used browsers and the figure 3 might explain why. These two browsers probably allow users to download better quality content. EarthWolf and Iron both have the highest rate of users downloading through p2p and cdn ( > 60%) , so it might also be because those browsers are suited for peer to peer sharing. Vectrice for instance, has less tha 1% of users downloading through p2p. 
 
 CONCLUSION :
-To conlude, I think that this analysis allowed me to recognize 3 major development axis:
+To conlude, I think that this analysis allowed me to recognize 3 major development axes:
 - targetting ISPs such as Datch Telecam to use Streamroot's solution which can be justified by the performances of other ISPs like BTP which are exploiting the peer to peer to the fullest.
 - Even though we cannot direclty influence the choice of the browser, it would be interesting to confirm the hypotheses made during the analysis (support of the peer to peer sharing, transfer of large files). If those issues are well defined, then streamroot's engineers can think of an internal solution to improve the performance for those browsers.
 - The management of the streams. I think it's important to keep a high number (or enough) of peer to peer users in each streams to allow new users to receive content. (cf stream# 7)
